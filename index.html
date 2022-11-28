@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var input;
+        var password;
+        window.onload = function () {
+            input = document.getElementById("id");
+            password = document.getElementById("pw");
+        }
+        function x() {
+            if (input.value == 'cat' && password.value == '1234') {
+                alert('로그인 성공');
+                document.getElementById('welcome').innerHTML = input.value+'회원님 반갑습니다'
+            }
+            else alert('로그인 실패');
+        }
+    </script>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #a{
+            border:5px solid gray;
+            height:150px;
+            width: 200px;
+            background-color: green;
+            border-radius:15px;
+            box-shadow:  5px 5px 5px;	
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a">
+        <!-- <form> -->
+            <input id="id" type="text" placeholder="동물이름">
+            <input id="pw" type="password">
+            <input type="button" value="로그인" onclick="x();">
+            <a href="reg_member.html"><input type="button" value="회원가입"></a>
+            <div id="welcome"></div>
+        <!-- </form> -->
+    </div>
+</body>
+</html>
